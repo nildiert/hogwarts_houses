@@ -12,15 +12,17 @@ export class ResponsiveToolbarComponent implements OnInit {
     {
       label: 'Personajes',
       icon: 'rowing',
-      // showOnMobile: true
+      link: '/characters'
     },
     {
       label: 'Estudiantes',
-      icon: 'book'
+      icon: 'book',
+      link: '/students'
     },
     {
       label: 'Profesores',
-      icon: 'groups'
+      icon: 'groups',
+      link: '/teachers'
     },
   ];
   
