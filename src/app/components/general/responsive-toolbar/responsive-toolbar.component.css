@@ -1,3 +1,7 @@
+a.active {
+    background: rgb(50, 50, 121)
+}
+
 a:hover {
     color: #eee;
     text-decoration: none;
