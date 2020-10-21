@@ -1,1 +1,11 @@
-<p>characters works!</p>
+<mat-card>
+    <form action="">
+      <mat-form-field>
+        <mat-select placeholder="House" matNativeControl  >
+          <mat-option (click)="selectHouse(house)" *ngFor="let house of houses" [value]="house" >
+            {{ house }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </mat-card>
