@@ -1,4 +1,4 @@
-export interface Teacher {
+export interface Character {
     name?: string;
     species?: string;
     gender?: string;

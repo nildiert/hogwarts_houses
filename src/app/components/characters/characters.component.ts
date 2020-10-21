@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Character } from "../../models/character";
+import { CharactersService } from 'src/app/services/characters.service';
 
 @Component({
   selector: 'app-characters',
@@ -8,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class CharactersComponent implements OnInit {
 
   houses = ["slytherin", "gryffindor", "ravenclaw", "hufflepuf"]
-  constructor() { }
+  characters: Character[] = [];
+  displayedColumns: string[] = ['name', 'patronus', 'image'];
+  constructor(public characterService: CharactersService) { }
 
   ngOnInit(): void {
   }
@@ -16,8 +20,14 @@ export class CharactersComponent implements OnInit {
   selectedHouse = this.houses[0]
 
   selectHouse(house: string) {
-    console.log(house);
-    // console.log(this.selectedHouse)
+    this.characterService.getCharacters(house)
+    .subscribe(
+      characters => {
+        this.characters = characters
+      }
+    )
   }
 
 }
+
+

@@ -9,3 +9,13 @@ mat-card {
 mat-form-field, input {
     width: 100%;
 }
+
+table {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  img {
+    width: 50px;
+    height: auto;
+  }
