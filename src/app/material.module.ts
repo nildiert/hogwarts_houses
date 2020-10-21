@@ -6,6 +6,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
+import { MatMenuModule} from '@angular/material/menu';
+
 
 
 
@@ -20,7 +22,8 @@ import {MatIconModule} from '@angular/material/icon';
         MatInputModule,
         MatSelectModule,
         MatSidenavModule,
-        MatIconModule
+        MatIconModule,
+        MatMenuModule
     ],
     exports: [
         MatButtonModule,
@@ -29,7 +32,8 @@ import {MatIconModule} from '@angular/material/icon';
         MatInputModule,
         MatSelectModule,
         MatSidenavModule,
-        MatIconModule
+        MatIconModule,
+        MatMenuModule
     ]
 })
 export class MaterialModule { }

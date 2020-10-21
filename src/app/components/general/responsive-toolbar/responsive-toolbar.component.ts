@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from "../../../models/menu-item";
 
 @Component({
   selector: 'app-responsive-toolbar',
@@ -6,6 +7,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./responsive-toolbar.component.css']
 })
 export class ResponsiveToolbarComponent implements OnInit {
+
+  menuItems: MenuItem[] = [
+    {
+      label: 'Sign Up',
+      icon: 'login',
+      // showOnMobile: true
+    },
+    {
+      label: 'About',
+      icon: 'help'
+    },
+    {
+      label: 'Pricing',
+      icon: 'attach_money'
+    },
+    {
+      label: 'Docs',
+      icon: 'notes'
+    },
+    {
+      label: 'Showcase',
+      icon: 'slideshow'
+    },
+    {
+      label: 'Blog',
+      icon: 'rss_feed'
+    },
+  ];
+  
 
   constructor() { }
 
