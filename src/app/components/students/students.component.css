@@ -1,0 +1,26 @@
+mat-card {
+  margin: auto;
+  width: 35%;
+  display: block;
+  margin-top: 2rem;
+}
+
+mat-form-field,
+input {
+  width: 100%;
+}
+
+table {
+  width: 95%;
+  margin: 2rem;
+}
+
+img {
+  width: 50px;
+  height: auto;
+}
+
+
+button {
+    margin: 2rem 0 0 2rem;
+}
