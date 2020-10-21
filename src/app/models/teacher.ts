@@ -1,5 +1,5 @@
 export interface Teacher {
-    name: string;
+    name?: string;
     species?: string;
     gender?: string;
     house?: string;
@@ -13,10 +13,10 @@ export interface Teacher {
         core?: string;
         length?: string;
     };
-    patronus: string,
+    patronus?: string,
     hogwartsStudent?: false,
     hogwartsStaff?: true,
     actor?: string,
     alive?: true,
-    image: "http://hp-api.herokuapp.com/images/mcgonagall.jpg"
+    image?: "http://hp-api.herokuapp.com/images/mcgonagall.jpg"
 }
