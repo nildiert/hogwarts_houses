@@ -2,15 +2,15 @@
   <form action="">
     <mat-form-field class="example-full-width">
       <mat-label>Name</mat-label>
-      <input matInput [(ngModel)]="name" placeholder="name" />
+      <input matInput [(ngModel)]="name" name="name" placeholder="name" />
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Patronus</mat-label>
-      <input matInput [(ngModel)]="patronus" placeholder="patronus" />
+      <input matInput [(ngModel)]="patronus" name="patronus" placeholder="patronus" />
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Image</mat-label>
-      <input matInput [(ngModel)]="image" type="url" placeholder="image" />
+      <input matInput [(ngModel)]="image" type="url" name="url" placeholder="image" />
     </mat-form-field>
   </form>
   <button mat-raised-button color="primary" (click)="addStudent()">

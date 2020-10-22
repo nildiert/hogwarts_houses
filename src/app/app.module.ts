@@ -11,6 +11,8 @@ import { MaterialModule } from "./material.module";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ResponsiveToolbarComponent } from './components/general/responsive-toolbar/responsive-toolbar.component';
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { HttpClientModule } from "@angular/common/http";
     MaterialModule,
     FlexLayoutModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

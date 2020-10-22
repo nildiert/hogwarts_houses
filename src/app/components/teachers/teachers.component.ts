@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Teacher } from "../../models/teacher";
+import { Teacher } from "../../models";
 import { TeachersService } from "../../services/teachers.service";
 
 export interface PeriodicElement {
@@ -17,7 +17,7 @@ export interface PeriodicElement {
 export class TeachersComponent implements OnInit {
 
   teachers: Teacher[] = [];
-  displayedColumns: string[] = ['name', 'patronus', 'image'];
+  displayedColumns: string[] = ['name', 'patronus', 'image', 'age'];
 
 
   constructor(public teacherService: TeachersService) { }
