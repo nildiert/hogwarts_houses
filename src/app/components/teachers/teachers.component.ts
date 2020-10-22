@@ -26,7 +26,6 @@ export class TeachersComponent implements OnInit {
     this.teacherService.getTeachers()
     .subscribe(
       teacher => {
-        console.log(teacher),
           this.teachers = teacher;
       },
       err => console.log(err)

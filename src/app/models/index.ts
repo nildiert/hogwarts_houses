@@ -1,4 +1,4 @@
-export interface Character {
+export interface Person {
     name?: string;
     species?: string;
     gender?: string;
@@ -19,4 +19,8 @@ export interface Character {
     actor?: string;
     alive?: true;
     image?: string;
+    age?: number;
 }
+export type Teacher= Person;
+export type Student= Person;
+export type Character= Person;

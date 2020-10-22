@@ -19,4 +19,5 @@ export interface Teacher {
     actor?: string;
     alive?: true;
     image?: string;
+    age?: number;
 }

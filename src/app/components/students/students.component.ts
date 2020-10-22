@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
+
 import { FormControl } from "@angular/forms";
-import { Student } from "../../models/student";
+import { Student } from "../../models";
 import { StudentsService } from "../../services/students.service";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-students',
@@ -11,42 +12,49 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 })
 export class StudentsComponent implements OnInit {
 
-  name = new FormControl('');
-  patronus = new FormControl('');
-  image = new FormControl('');
+  name = '';
+  patronus = '';
+  image = '';
 
   students: Student[] = [];
   newStudents: Student[] = [];
-  displayedColumns: string[] = ['name', 'patronus', 'image'];
+  displayedColumns: string[] = ['name', 'patronus', 'image', 'age'];
 
   new_student: Student = {}
 
-  constructor(public studentService: StudentsService) { }
-
+  constructor(public studentService: StudentsService) {
+  }
+  resetForms() {
+    this.name = '';
+    this.patronus = '';
+    this.image = '';
+  }
   ngOnInit(): void {
     this.studentService.getStudents()
-    .subscribe(
-      students => {
-        this.students = students;
-        console.log(students)
-      },
-      err => console.log(err)
+      .subscribe(
+        students => {
+          this.students = students;
+        },
+        err => console.log(err)
       )
   }
 
   addStudent() {
-    let newStudent = {} as Student;
-    newStudent.name = this.name.value;
-    newStudent.patronus = this.patronus.value;
-    newStudent.image = this.image.value;
+    const { name, patronus, image } = this;
+    this.students = [...this.students, { name, patronus, image }]
+    this.resetForms();
+  }
 
-
-    this.studentService.getStudents()
-    .subscribe(students => {
-      this.students = students;
-      this.students.concat(this.newStudents);
-      console.log(this.students)
-    })
+  getYears(dateOfBirth: string) {
+    if(!dateOfBirth) return "---"
+    const today = new Date();
+    const birthDate = new Date(dateOfBirth);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
   }
 
 }
