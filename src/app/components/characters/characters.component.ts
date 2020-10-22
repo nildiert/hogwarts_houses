@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from "../../models/character";
 import { CharactersService } from 'src/app/services/characters.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-characters',

@@ -1,6 +1,17 @@
-<button mat-raised-button color="primary">
-  Agregar estudiante
-</button>
+<mat-card>
+  <form action="">
+    <!-- <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput [formControl]="name" placeholder="name">
+    </mat-form-field> -->
+  </form>
+</mat-card>
+
+    <button mat-raised-button color="primary" (click)="addStudent()" >
+      Agregar estudiante
+    </button>
+ 
+
 
 <table mat-table [dataSource]="students" class="mat-elevation-z8">
   

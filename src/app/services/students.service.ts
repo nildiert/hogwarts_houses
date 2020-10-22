@@ -7,7 +7,8 @@ import { Student } from "../models/student";
 })
 export class StudentsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   getStudents() {
     return this.http.get<Student[]>('http://hp-api.herokuapp.com/api/characters/students');

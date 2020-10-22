@@ -27,7 +27,7 @@ import { HttpClientModule } from "@angular/common/http";
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
